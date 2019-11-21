@@ -67,7 +67,11 @@ public:
   }
   void predict(
     const rclcpp::Time & reference_time,
-    const rclcpp::Duration & delta) {}
+    const rclcpp::Duration & delta)
+  {
+    (void)reference_time;
+    (void)delta;
+  }
 };
 
 class FilterDerived2 : public FilterBase
@@ -75,11 +79,18 @@ class FilterDerived2 : public FilterBase
 public:
   FilterDerived2() {}
 
-  void correct(const Measurement & measurement) {}
+  void correct(const Measurement & measurement)
+  {
+    (void)measurement;
+  }
 
   void predict(
     const rclcpp::Time & reference_time,
-    const rclcpp::Duration & delta) {}
+    const rclcpp::Duration & delta)
+  {
+    (void)reference_time;
+    (void)delta;
+  }
 
   void processMeasurement(const Measurement & measurement)
   {

@@ -331,6 +331,7 @@ void FilterBase::setState(const Eigen::VectorXd & state) {state_ = state;}
 
 void FilterBase::validateDelta(rclcpp::Duration & delta)
 {
+  (void)delta;
   // TODO(someone): Need to verify this condition B'Coz
   // rclcpp::Duration(100000.0) value is 0.00010000000000000000479
   // This handles issues with ROS time when use_sim_time is on and we're playing
